@@ -3,9 +3,6 @@
 from ipaddress import ip_network
 from ipify import get_ip
 from troposphere import (
-    InstanceProfile,
-    PolicyType as IAMPolicy,
-    Role,
     Base64,
     ec2,
     GetAtt,
@@ -14,6 +11,12 @@ from troposphere import (
     Parameter,
     Ref,
     Template,
+)
+
+from troposphere.iam import (
+  InstanceProfile,
+  PolicyType as IAMPolicy,
+  Role,
 )
 
 from awacs.aws import (
